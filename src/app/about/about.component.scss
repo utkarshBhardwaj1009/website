@@ -1,0 +1,47 @@
+.aboutDetails{
+    display: flex;
+    flex-direction: column;
+    .eachRow{
+        display: flex;
+        flex-direction: row;
+    }
+    .rowItem{
+        width: 50%;
+        display: flex;
+    }
+    .itemIcon{
+        margin-right: 1em;
+    }
+}
+.aboutSection{
+    padding: 0% 1%;
+}
+.bg-light{
+    background-color: #F3F6FF;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.bg-yellow{
+    background-color: #DFB163 !important;
+}
+.aboutDetailsContainer{
+    margin-top: 3rem;
+    padding-left: 3rem !important;
+}
+.alignMiddle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.experienceSection{
+    flex-direction: column;
+    .experienceImage{
+        
+    }
+    .experienceDetails{
+        flex-direction: column;
+    }
+}

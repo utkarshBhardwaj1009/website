@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<app-carousel></app-carousel>
+
+<!-- Routed Components Will Appear Here -->
+<router-outlet></router-outlet>
+<app-about></app-about>
+<app-services-section></app-services-section>
+<app-projects-section></app-projects-section>
+<app-footer></app-footer>
+<!-- Floating Action Button (FAB) -->
+<button 
+  mat-fab 
+  class="fab-btn" 
+  [ngStyle]="{'background-color': isHovered ? hoverColor : defaultColor}" 
+  (mouseover)="onHover()" 
+  (mouseleave)="onLeave()" 
+  (click)="openDialog()"
+  *ngIf="!isDialogOpen"  
+  aria-label="Schedule a visit">
+  <mat-icon>{{ currentIcon }}</mat-icon>
+  <span *ngIf="!isHovered">Schedule Visit</span>
+  <span *ngIf="isHovered">Book Now</span>
+</button>
+

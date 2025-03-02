@@ -1,0 +1,80 @@
+<!-- Topbar Start -->
+<div class="container-fluid bg-dark py-3" id="topbar" [class.hidden]="!isTopbarVisible">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 text-md-left icon-left mb-2 mb-md-0">
+          <div class="d-inline-flex align-items-center">
+            <a class="text-white px-3" href="">FAQs</a>
+            <span class="text-white">|</span>
+            <a class="text-white px-3" href="">Help</a>
+            <span class="text-white">|</span>
+            <a class="text-white px-3" href="">Support</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 text-md-right icon-right">
+          <div class="d-inline-flex align-items-center">
+            <a class="text-white px-3" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="text-white px-3" href=""><i class="fab fa-twitter"></i></a>
+            <a class="text-white px-3" href=""><i class="fab fa-linkedin-in"></i></a>
+            <a class="text-white px-3" href=""><i class="fab fa-instagram"></i></a>
+            <a class="text-white pl-3" href=""><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Topbar End -->
+  <!-- Navbar Start -->
+  <mat-toolbar color="primary" class="navbar" position="sticky">
+    <!-- Mobile Menu Button -->
+    <button mat-icon-button (click)="sidenav.toggle()" class="mobile-menu-btn">
+      <mat-icon>menu</mat-icon>
+    </button>
+  
+    <!-- Logo -->
+    <button mat-button routerLink="/" class="logo">
+      <img src="/assets/logo2.png" alt="Logo" class="logo-image" style="width: 15em;" />
+    </button>
+  
+    <!-- Spacer -->
+    <!-- <span class="spacer"></span> -->
+  
+    <!-- Navbar Items for Desktop -->
+    <div class="desktop-nav">
+      <button mat-button class="nav-item">Home</button>
+      <button mat-button class="nav-item">About Us</button>
+      <button mat-button [matMenuTriggerFor]="servicesMenu" class="nav-item">
+        Services
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #servicesMenu="matMenu">
+        <button mat-menu-item>Interior Design</button>
+        <button mat-menu-item>Exterior Design</button>
+        <button mat-menu-item>Consulting</button>
+      </mat-menu>
+      <button mat-button class="nav-item">Projects</button>
+      <button mat-button class="nav-item">Contact Us</button>
+    </div>
+  
+    <!-- Marquee -->
+    <div class="marquee-container">
+      <div class="marquee">
+        <p>
+          We’re in high demand! Now accepting projects for 5000+ Sqft only. Let's create something extraordinary together!
+        </p>
+      </div>
+    </div>
+  </mat-toolbar>
+  
+  <!-- Mobile Sidenav -->
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over" class="mobile-sidenav">
+      <button mat-button class="sidenav-item" (click)="sidenav.close()">Home</button>
+      <button mat-button class="sidenav-item" (click)="sidenav.close()">About Us</button>
+      <button mat-button class="sidenav-item" (click)="sidenav.close()">Services</button>
+      <button mat-button class="sidenav-item" (click)="sidenav.close()">Projects</button>
+      <button mat-button class="sidenav-item" (click)="sidenav.close()">Contact Us</button>
+    </mat-sidenav>
+  </mat-sidenav-container>
+  <!-- Navbar End -->
+  

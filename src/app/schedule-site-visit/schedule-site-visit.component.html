@@ -1,0 +1,49 @@
+<div class="custom-dialog">
+    <button class="dialog-close-btn"  (click)="closeDialog()" mat-dialog-close aria-label="Close dialog">&times;</button>
+    <h2 mat-dialog-title class="dialogHeader">Schedule a Site Visit</h2>
+  
+    <form [formGroup]="siteVisitForm" (ngSubmit)="onSubmit()" class="dialog-content">
+      <div class="row">
+        <div class="label">Name:</div>
+        <div class="value">
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="name" placeholder="Name" />
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="label">Phone Number:</div>
+        <div class="value">
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="phoneNumber" placeholder="Phone Number" type="tel" />
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="label">Email:</div>
+        <div class="value">
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="email" placeholder="Email" type="email" />
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="label">Pincode:</div>
+        <div class="value">
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="pincode" placeholder="Pincode" type="text" />
+          </mat-form-field>
+        </div>
+      </div>
+  
+      <mat-checkbox formControlName="acceptUpdates">
+        Yes, I would like to receive updates on WhatsApp
+      </mat-checkbox>
+  
+      <button mat-raised-button color="primary" class="submitButton" [disabled]="siteVisitForm.invalid">Submit</button>
+    </form>
+  </div>
+  

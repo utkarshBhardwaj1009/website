@@ -1,0 +1,48 @@
+<div class="projects-section container-fluid py-5">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col text-center mb-4">
+          <h1 class="mb-4">Some Of Our Awesome Projects</h1>
+        </div>
+      </div>
+  
+      <!-- Project Filter Buttons -->
+      <div class="row">
+        <div class="col-12 text-center mb-2">
+          <button
+            mat-button
+            *ngFor="let filter of filters"
+            [class.active]="filter === activeFilter"
+            (click)="setFilter(filter)"
+            class="btn m-1"
+          >
+            {{ filter }}
+          </button>
+        </div>
+      </div>
+  
+      <!-- Project Cards -->
+      <div class="row">
+        <div
+          class="col-lg-4 col-md-6 col-sm-12 mb-4"
+          *ngFor="let project of filteredProjects"
+        >
+          <div class="project-card">
+            <img class="project-image" [src]="project.image" [alt]="project.name" />
+            <div class="overlay">
+              <h4 class="project-title">{{ project.name }}</h4>
+              <div class="actions">
+                <button mat-raised-button color="primary">
+                  <i class="fa fa-link"></i> View Details
+                </button>
+                <button mat-raised-button color="accent">
+                  <i class="fa fa-eye"></i> View Image
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

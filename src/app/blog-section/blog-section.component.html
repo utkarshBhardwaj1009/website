@@ -1,0 +1,16 @@
+<div class="blog-section">
+    <h2 class="section-title">Our Latest Blogs</h2>
+    <div class="blog-cards">
+      <mat-card class="blog-card" *ngFor="let blog of blogs">
+        <img mat-card-image [src]="blog.image" alt="{{ blog.title }}" />
+        <mat-card-content>
+          <h3 mat-card-title>{{ blog.title }}</h3>
+          <p class="blog-info">
+            By <strong>{{ blog.admin }}</strong> | {{ blog.date }}
+          </p>
+          <p class="blog-description">{{ blog.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  

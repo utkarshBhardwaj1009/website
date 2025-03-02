@@ -1,0 +1,102 @@
+/* Basic Styling for Carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    right: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .caption-content {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    color: #DFB163;
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 0.5s ease-out forwards; /* Add the animation */
+    animation-delay: 0.5s; /* Optional: Add delay */
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background-color: transparent;
+    color: white;
+    height: auto;
+    width: 15%;
+    // padding: 10px;
+    // background-color: #DFB163;
+  }
+  
+//   .carousel-control-prev {
+//     left: 10%;
+//   }
+  
+//   .carousel-control-next {
+//     right: 10%;
+//   }
+  
+  /* carousel.component.css */
+.carousel-item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  button {
+    mat-icon{
+        background-color: #DFB163;
+        width: 45px;
+        height: auto;
+    }
+  }
+  .learn-more-btn {
+    padding: 1rem 2rem; // Custom height and width
+    font-size: 1.25rem;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #DFB163;
+  }
+  .learn-more-btn:hover {
+    color: black;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

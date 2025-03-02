@@ -1,0 +1,74 @@
+.fab-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    min-width: 200px; /* Slightly larger for emphasis */
+    font-size: 15px; /* Slightly bigger font */
+    font-weight: bold;
+    color: #333; /* Dark gray text for contrast */
+    background-color: #f4f4f4; /* Soft off-white background */
+    border: 2px solid #dcdcdc; /* Light gray border */
+    border-radius: 10px !important; /* Rounded for elegance */
+    box-shadow: 
+      0 6px 12px rgba(0, 0, 0, 0.1), /* Soft shadow */
+      inset 0 0 4px rgba(255, 255, 255, 0.7); /* Inner glow effect */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .fab-icon {
+    font-size: 22px;
+    color: #9e9e9e; /* Soft gray icon */
+    transition: color 0.3s ease;
+  }
+  
+  .fab-btn:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+    color: #333; /* Dark text for contrast */
+    transform: scale(1.1); /* Subtle zoom effect */
+    box-shadow: 
+      0 8px 16px rgba(0, 0, 0, 0.15), /* Light shadow */
+      0 0 12px rgba(0, 0, 0, 0.1); /* Glow effect */
+  }
+  
+  .fab-btn:focus {
+    outline: none;
+    box-shadow: 
+      0 0 12px #f0e1d2, /* Focus glow for accessibility */
+      0 0 20px rgba(0, 0, 0, 0.1); /* Soft spread glow */
+  }
+  
+  .fab-btn:active {
+    transform: scale(0.95); /* Slight press effect */
+    background-color: #dcdcdc; /* Darker gray for active state */
+  }
+  
+  .fab-btn-text {
+    font-weight: bold;
+    text-transform: uppercase; /* Optional for emphasis */
+  }
+  
+  .fab-btn[data-theme="light"] {
+    background-color: #faf0e6; /* Light beige for a warm feel */
+    color: #333; /* Dark text for contrast */
+    border: 2px solid #f0e1d2; /* Beige border */
+  }
+  
+  .fab-btn[data-theme="light"]:hover {
+    background-color: #f0e1d2; /* Slightly darker beige hover */
+    color: #333; /* Dark text */
+    box-shadow: 
+      0 8px 16px rgba(0, 0, 0, 0.1), /* Soft shadow */
+      0 0 12px rgba(255, 255, 255, 0.2); /* Glow effect */
+  }
+  /* In your styles.scss or component-specific CSS */
+.center-dialog .mat-dialog-container {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }

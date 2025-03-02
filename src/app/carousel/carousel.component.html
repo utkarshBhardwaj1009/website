@@ -1,0 +1,25 @@
+<div class="container-fluid p-0">
+    <div class="carousel-container">
+      <div class="carousel-inner" [ngClass]="{ 'active': currentIndex === 0 }">
+        <div *ngFor="let slide of slides; let i = index" class="carousel-item" [ngClass]="{'active': currentIndex === i}">
+          <img [src]="slide.image" class="w-100" alt="Image">
+          <div class="carousel-caption">
+            <div class="caption-content">
+              <h4 class="text-uppercase font-weight-normal mb-md-3">{{ slide.title }}</h4>
+              <h3 class="display-3 text-white mb-md-4">{{ slide.subtitle }}</h3>
+              <button mat-button (click)="learnMore(slide.link)" class="btn py-md-3 px-md-5 mt-2 mt-md-4 learn-more-btn">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Carousel Controls -->
+      <button (click)="prevSlide()" class="carousel-control-prev">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <button (click)="nextSlide()" class="carousel-control-next">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+  
